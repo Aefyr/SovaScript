@@ -23,7 +23,7 @@ const users = [
 const siteConfig = {
   title: 'SovaScript', // Title for your website.
   tagline: 'Документация SovaScript',
-  url: 'https://sovascript.github.io', // Your website URL
+  url: 'https://aefyr.github.io', // Your website URL
   baseUrl: '/SovaScript/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
