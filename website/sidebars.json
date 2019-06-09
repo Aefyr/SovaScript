@@ -1,0 +1,12 @@
+{
+  "docs": {
+    "С чего начать": ["doc_tutorial_ssbasics", "doc_tutorial_codeexample"]
+  },
+  "docs-api": {
+    "Модуль Lifecycle": ["doc_sscore_global"],
+    "Модуль Handler": ["doc_sshandler_global"],
+    "Модуль Log": ["doc_sslog_global"],
+    "Модуль Dialogs": ["doc_ssdialogs_global"],
+    "Модуль VkApi": ["doc_ssvkapi_global", "doc_ssvkapi_vkapi", "doc_ssvkapi_vkapimessage", "doc_ssvkapi_vkapiresponse"]
+  }
+}
