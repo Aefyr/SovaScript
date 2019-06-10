@@ -9,6 +9,7 @@ sidebar_label: Глобальные функции и свойства
 | **[alert(message)](#alertmessage)**                        |
 | **[confirm(message, callback)](#confirmmessage-callback)**               |
 | **[prompt(message, callback)](#promptmessage-callback)**                              |
+| **[pickFile(message, callback)](#pickfilemessage-callback)**                              |
 
 ## Функции
 
@@ -59,3 +60,22 @@ prompt("Введите любой текст", function(response){
 | :------------------------------| :--------------------------------------------------------------------- |
 | **String** message             |Сообщение для показа пользователю                                       |
 | **function(String)** callback  |Функция, в которую будет доставлен ответ пользователя                   |
+
+
+
+### pickFile(message, callback)
+Предлагает пользователю выбрать файл, в предложении будет указано сообщение **message**. Если пользователя отменяет выбор файла, вызывает **callback** с аргументом **null**, если пользователь выбирает файл, вызывает **callback** с Uri файла в качестве аргумента.  
+**Пример:**
+```javascript
+pickFile("Введите любой текст", function(fileUri){
+    if(fileUri){
+        alert("Вы выбрали файл с расширением " + Files.getExtension(fileUri));
+    }else{
+        alert("Вы отменили выбор файла!");
+    }
+});
+```
+| Аргументы                      |                                                                        |
+| :------------------------------| :--------------------------------------------------------------------- |
+| **String** message             |Сообщение для показа пользователю                                       |
+| **function(String)** callback  |Функция, в которую будет доставлен Uri файла или **null**               |

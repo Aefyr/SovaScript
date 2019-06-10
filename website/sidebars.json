@@ -1,12 +1,14 @@
 {
   "docs": {
-    "С чего начать": ["doc_tutorial_ssbasics", "doc_tutorial_codeexample"]
+    "С чего начать": ["doc_tutorial_ssbasics", "doc_tutorial_codeexample", "doc_tutorial_codeexample2"]
   },
   "docs-api": {
     "Модуль Lifecycle": ["doc_sscore_global"],
     "Модуль Handler": ["doc_sshandler_global"],
     "Модуль Log": ["doc_sslog_global"],
     "Модуль Dialogs": ["doc_ssdialogs_global"],
-    "Модуль VkApi": ["doc_ssvkapi_global", "doc_ssvkapi_vkapi", "doc_ssvkapi_vkapimessage", "doc_ssvkapi_vkapiresponse"]
+    "Модуль VkApi": ["doc_ssvkapi_global", "doc_ssvkapi_vkapi", "doc_ssvkapi_vkapimessage", "doc_ssvkapi_vkapiresponse", "doc_ssvkapi_vkapityping"],
+    "Модуль Storage": ["doc_ssstorage_global", "doc_sstorage_storage"],
+    "Модуль Files": ["doc_ssfiles_global", "doc_ssfiles_files"]
   }
 }
