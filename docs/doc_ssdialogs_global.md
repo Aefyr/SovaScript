@@ -10,6 +10,7 @@ sidebar_label: Глобальные функции и свойства
 | **[confirm(message, callback)](#confirmmessage-callback)**               |
 | **[prompt(message, callback)](#promptmessage-callback)**                              |
 | **[pickFile(message, callback)](#pickfilemessage-callback)**                              |
+| **[pickFromList(message, list, callback)](#pickfromlistmessage-list-callback)**                              |
 
 ## Функции
 
@@ -67,7 +68,7 @@ prompt("Введите любой текст", function(response){
 Предлагает пользователю выбрать файл, в предложении будет указано сообщение **message**. Если пользователя отменяет выбор файла, вызывает **callback** с аргументом **null**, если пользователь выбирает файл, вызывает **callback** с Uri файла в качестве аргумента.  
 **Пример:**
 ```javascript
-pickFile("Введите любой текст", function(fileUri){
+pickFile("Выберите любой файл", function(fileUri){
     if(fileUri){
         alert("Вы выбрали файл с расширением " + Files.getExtension(fileUri));
     }else{
@@ -79,3 +80,24 @@ pickFile("Введите любой текст", function(fileUri){
 | :------------------------------| :--------------------------------------------------------------------- |
 | **String** message             |Сообщение для показа пользователю                                       |
 | **function(String)** callback  |Функция, в которую будет доставлен Uri файла или **null**               |
+
+
+
+### pickFromList(message, list, callback)
+Показывает пользователю диалог с сообщением **message** и списком элементов из **list**. При выборе пользователем элемента, будет вызван **callback** с его индексом, при отмене выбора - **callback** с индексом **-1**.  
+**Пример:**
+```javascript
+list = ["element1", "element2", "element3"];
+pickFromList("Выберите любой элемент", list, function(index){
+    if(index == -1){
+        alert("Вы отменили выбор!");
+    }else{
+        alert("Вы выбрали " + list[index]);
+    }
+});
+```
+| Аргументы                      |                                                                                                      |
+| :------------------------------| :--------------------------------------------------------------------------------------------------- |
+| **String** message             |Сообщение для показа пользователю                                                                     |
+| **Array of String** list       |Массив элементов для показа в диалоге                                                                 |
+| **function(int)** callback     |Функция, в которую будет доставлен индекс выбранного элемента или -1, при отмене выбора               |

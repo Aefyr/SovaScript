@@ -7,8 +7,11 @@ sidebar_label: VkApi
 | -                                                                                                                       |
 | :-----------------------------------------------------------------------------------------------------------------------|
 | **[call(method, args, callback)](#callmethod-args-callback)**                                                           |
-| **[myId()](#myid)**                                                                                                     |
 | **[upload(uploadUrl, fileFieldName, fileUri, args, callback)](#uploaduploadurl-filefieldname-fileuri-args-callback)**   |
+| **[myId()](#myid)**                                                                                                     |
+| **[getAccounts()](#getaccounts)**                                                                                       |
+| **[setAccount(account)](#setaccountaccount)**                                                                           |
+
 
 ### Свойства
 | Имя                                     | Тип                  |
@@ -65,6 +68,24 @@ Vk.call('messages.send', args, function(response){
 | Возвращает           |                                                                                                       |
 | :--------------------| :---------------------------------------------------------------------------------------------------- |
 | **int**                  |ID текущего аккаунта VK                                                                            |
+
+
+
+### getAccounts()
+Возвращает список доступных аккаунтов
+
+| Возвращает                                            |                                                                               |
+| :-----------------------------------------------------| :-----------------------------------------------------------------------------|
+| **Array of [VkApiAccount](doc_ssvkapi_vkapiaccount)** |Массив доступных аккаунтов                                                     |
+
+
+
+### setAccount(account)
+Устанавливает текущий аккаунт для метода [call(method, args, callback)](#callmethod-args-callback), не действует на колбэки от LongPoll.
+
+| Аргументы                                                          |                                                                                                  |
+| :------------------------------------------------------------------| :----------------------------------------------------------------------------------------------- |
+| **[VkApiAccount](doc_ssvkapi_vkapiaccount) или int** account       |[VkApiAccount](doc_ssvkapi_vkapiaccount) целового аккаунта, либо его ID как **int**               |
 
 
 
